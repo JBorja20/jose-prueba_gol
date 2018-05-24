@@ -1,0 +1,42 @@
+#import vlccast
+#p = vlccast.MediaPlayer("1.mp3")
+#p.play()
+
+#p.stop()
+from tkinter import  *
+tk=Tk()
+canvas =Canvas(tk,width=1000,heigh=400)
+canvas.pack()
+
+imagen2=PhotoImage(file="indice123.png")
+canvas.create_image(0,50,anchor=NW,image=imagen2)
+
+my_imagen2=PhotoImage(file="57001.gif")
+canvas.create_image(700,50,anchor=NW,image=my_imagen2)
+
+
+
+
+def movetriangulo(event):
+    canvas.move(2, 10,0 )
+canvas.bind_all('<d>',movetriangulo)
+
+def movetriangulo3(event):
+    canvas.move(2, -10, 0)
+canvas.bind_all('<a>',movetriangulo3)
+def movetriangulo1(event):
+    canvas.move(2, 1,30 )
+canvas.bind_all('<s>',movetriangulo1)
+def movetriangulo2(event):
+    canvas.move(2, -1,-45)
+canvas.bind_all('<w>',movetriangulo2)
+
+
+def imange(event):
+    if image_names()==my_imagen2:
+        print("golll")
+
+
+tk.mainloop()
+
+
